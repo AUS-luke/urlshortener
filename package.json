@@ -1,0 +1,24 @@
+{
+  "name": "urlshortener",
+  "version": "1.0.0",
+  "description": "FCC URL Shortener Microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AUS-luke/urlshortener.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AUS-luke/urlshortener/issues"
+  },
+  "homepage": "https://github.com/AUS-luke/urlshortener#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "mongodb": "^2.2.9",
+    "valid-url": "^1.0.9"
+  }
+}
