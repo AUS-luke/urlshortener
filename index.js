@@ -71,7 +71,7 @@ function processUrl(url,res, domain, db) {
         insertEntry(urlDb, url, function (result) {
           res.send({
             original_url: url,
-            short_url: result
+            short_url: 'http://' + domain + '/' + result
           });
           res.end();
         });
