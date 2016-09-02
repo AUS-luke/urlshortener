@@ -41,8 +41,7 @@ app.use('/', (req, res) => {
     setUpDb(function (db) { getUrl(param, res, db);});
   }
   else {
-    console.log('uh oh shouldnt be here');
-    console.log(param);
+    console.error('Program error. Did not understand supplied parameter' + param);
   }
 
 });
@@ -53,7 +52,7 @@ app.listen(port);
 function setUpDb(callback) {
   MongoClient.connect(mongoUrl, function (err, db) {
     if (err) {
-      console.log('Unable to connect to the mongoDB server. Error:', err);
+      console.error('Unable to connect to the mongoDB server. Error:', err);
     } else {
       console.log('Connection established to', mongoUrl);
       callback(db);
